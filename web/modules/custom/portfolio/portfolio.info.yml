@@ -1,0 +1,5 @@
+name: 'Portfolio'
+type: module
+description: 'A custom module to display jokes from the JokeAPI.'
+core_version_requirement: ^10
+package: Custom

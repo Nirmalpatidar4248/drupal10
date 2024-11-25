@@ -1,0 +1,14 @@
+name: 'Finexo Theme'
+type: theme
+description: 'A custom theme based on the Finexo HTML template.'
+core_version_requirement: ^9 || ^10
+base theme: claro
+package: Custom
+libraries:
+  - finexo_theme/global-styling
+regions:
+  header: 'Header'
+  primary_menu: 'Primary menu'
+  content: 'Content'
+  sidebar_first: 'Sidebar first'
+  footer: 'Footer'

@@ -1,0 +1,9 @@
+portfolio_view_styles:
+  css:
+    theme:
+      css/portfolio-view.css: {}
+  js:
+    js/portfolio-view.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal

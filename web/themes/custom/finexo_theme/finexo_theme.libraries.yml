@@ -1,0 +1,25 @@
+global-styling:
+  version: VERSION
+  css:
+    theme:
+      # css/bootstrap.css: {}
+      css/animate.css: {}
+      css/flex-slider.css: {}
+      css/fontawesome.css: {}
+      css/owl.css: {}
+      css/templatemo-villa-agency.css: {}
+      css/font-awesome.min.css: {}
+      css/style.css: {}
+      css/responsive.css: {}
+      https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css: { type: external, minified: true }
+  js:
+    js/bootstrap.js: {}
+    js/custom.js: {}
+    js/counter.js: {}
+    js/isotope.min.js: {}
+    js/owl-carousel.js: {}
+  # dependencies:
+  #   - core/jquery
+  #   - core/drupal
+  #   - core/drupalSettings
+

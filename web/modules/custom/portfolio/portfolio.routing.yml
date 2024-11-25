@@ -1,0 +1,20 @@
+
+portfolio.custom_form:
+  path: '/portfolio-form'
+  defaults:
+    _form: '\Drupal\portfolio\Form\PortfolioForm'
+    _title: 'Create Portfolio'
+  requirements:
+    _permission: 'access content'    
+
+
+portfolio.portfolio_list:
+  path: '/api/portfolio'
+  defaults:
+    _controller: '\Drupal\portfolio\Controller\PortfolioApiController::getPortfolioData'
+    _title: 'Profile Form'
+  requirements:
+    _permission: 'access content'
+    _access: 'TRUE'
+  methods: [GET]
+  _format: 'json'

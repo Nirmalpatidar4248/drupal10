@@ -1,0 +1,79 @@
+<div class="container my-4">
+  <div class="row">
+    <!-- Left Side: Profile Image -->
+    <div class="col-md-4">
+      <div class="card">
+        {{ content.field_profile_picture }}
+      </div>
+    </div>
+
+    <!-- Right Side: User Details Inline -->
+    <div class="col-md-8">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-4"><strong>First Name:</strong></div>
+          <div class="col-8">{{ content.field_firstname }}</div>
+        </div>
+        <div class="row">
+          <div class="col-4"><strong>Last Name:</strong></div>
+          <div class="col-8">{{ content.field_lastname }}</div>
+        </div>
+        <div class="row">
+          <div class="col-4"><strong>Email:</strong></div>
+          <div class="col-8">{{ content.field_email }}</div>
+        </div>
+        <div class="row">
+          <div class="col-4"><strong>Phone:</strong></div>
+          <div class="col-8">{{ content.field_mobile_number }}</div>
+        </div>
+        <div class="row">
+          <div class="col-4"><strong>Gender:</strong></div>
+          <div class="col-8">{{ content.field_gender }}</div>
+        </div>
+        <div class="row">
+          <div class="col-4"><strong>Date of Birth:</strong></div>
+          <div class="col-8">{{ content.field_birth_date }}</div>
+        </div>
+        <div class="row">
+          <div class="col-4"><strong>Address:</strong></div>
+          <div class="col-8">{{ content.field_address }}</div>
+        </div>
+        <div class="row">
+          <div class="col-4"><strong>Short Bio:</strong></div>
+          <div class="col-8">{{ content.field_short_bio }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Project Grid Section -->
+  <h4 class="my-4">Projects</h4>
+  <div class="container">
+    {% if node.field_projects %}
+      {% for project in node.field_projects %}
+        <div class="card mb-4">
+          <div class="row g-0 align-items-center">
+            <!-- Image Block -->
+            {% if project.entity.field_images.entity %}
+              <div class="col-md-4 d-flex justify-content-center">
+                <img src="{{ file_url(project.entity.field_images.entity.uri.value) }}" class="img-fluid rounded-start" alt="{{ project.entity.field_title.value }}" style="max-width: 100%; height: auto;">
+              </div>
+            {% endif %}
+
+            <!-- Title Block -->
+            <div class="col-md-4 d-flex align-items-center justify-content-center">
+              <h5 class="card-title mb-0">{{ project.entity.field_titlee.value }}</h5>
+            </div>
+
+            <!-- Description Block -->
+            <div class="col-md-4 d-flex align-items-center">
+              <p class="card-text mb-0">{{ project.entity.field_description.value }}</p>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    {% else %}
+      <p>No projects available.</p>
+    {% endif %}
+  </div>
+</div>
